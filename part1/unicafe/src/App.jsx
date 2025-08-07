@@ -4,12 +4,17 @@ const Button = ({ name, onClick }) =>
   <button onClick={onClick}>{name}</button>
 
 const Statistics = (props) => {
+  const nClicks = props.goodClicks + props.neutralClicks + props.badClicks
+
   return (
     <div>
       <h1>statistics</h1>
       <p>good {props.goodClicks}</p>
       <p>neutral {props.neutralClicks}</p>
       <p>bad {props.badClicks}</p>
+      <p>all {nClicks}</p>
+      <p>average {(props.goodClicks - props.badClicks) / nClicks}</p>
+      <p>positive {(props.goodClicks / nClicks) * 100} %</p>
     </div>
   )
 }

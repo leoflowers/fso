@@ -1,6 +1,11 @@
 const Person = ({ info }) => {
-  console.log('Person:', info)
-  return <p>{info.name} {info.number}</p>
+  return (
+    <div>
+      <div>
+        {info.name} {info.number} <button type="submit">add</button>
+      </div>
+    </div>
+  )
 }
 
 const Persons = ({ persons }) => {

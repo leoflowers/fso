@@ -1,4 +1,5 @@
 const Person = ({ info }) => {
+  console.log('Person:', info)
   return <p>{info.name} {info.number}</p>
 }
 

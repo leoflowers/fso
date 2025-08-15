@@ -1,5 +1,7 @@
 import { useState } from 'react'
 
+import personsService from '../services/persons'
+
 /// PersonForm: adds a new person to phone book
 const PersonForm = (props) => {
   const [name, setName] = useState('')
@@ -28,12 +30,16 @@ const PersonForm = (props) => {
       return
     }
 
-    props.setPersons(props.persons.concat({
-      name: name,
-      number: number,
-    }))
+    const newPersonObject = { 
+      name: name, 
+      number: number, 
+      id: String(props.persons.length + 1) 
+    }
 
-    resetForm()
+    personsService.create(newPersonObject).then(newPerson => {
+      props.setPersons(props.persons.concat(newPerson))
+      resetForm()
+    })
   }
 
   return (

@@ -30,10 +30,11 @@ const PersonForm = (props) => {
       return
     }
 
-    const newPersonObject = { 
-      name: name, 
-      number: number, 
-      id: String(props.persons.length + 1) 
+    const nextId = Math.max(...props.persons.map(person => person.id)) + 1
+    const newPersonObject = {
+      name: name,
+      number: number,
+      id: String(nextId)
     }
 
     personsService.create(newPersonObject).then(newPerson => {

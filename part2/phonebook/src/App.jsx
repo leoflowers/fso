@@ -23,20 +23,21 @@ const App = () => {
     <div>
       <h2>Phonebook</h2>
 
-      <Filter 
+      <Filter
         nameFilter={nameFilter}
         setNameFilter={setNameFilter}
       />
 
       <h3>Add a new contact</h3>
-      <PersonForm 
-        persons={persons} 
+      <PersonForm
+        persons={persons}
         setPersons={setPersons}
       />
 
       <h3>Numbers</h3>
-      <Persons 
+      <Persons
         persons={persons.filter((person) => person.name.includes(nameFilter))}
+        setPersons={setPersons}
       />
     </div>
   )

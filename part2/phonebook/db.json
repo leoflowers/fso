@@ -21,24 +21,9 @@
       "id": "4"
     },
     {
-      "id": "5",
-      "name": "leo",
-      "number": "123"
-    },
-    {
       "id": "6",
       "name": "natalie",
       "number": "911"
-    },
-    {
-      "id": "7",
-      "name": "alex",
-      "number": "44123"
-    },
-    {
-      "id": "8",
-      "name": "simon",
-      "number": "55112"
     },
     {
       "id": "9",
@@ -49,6 +34,11 @@
       "id": "10",
       "name": "hal",
       "number": "111"
+    },
+    {
+      "id": "11",
+      "name": "leo",
+      "number": "123"
     }
   ]
 }
